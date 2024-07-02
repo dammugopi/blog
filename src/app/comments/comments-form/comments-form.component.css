@@ -1,0 +1,5 @@
+.form-control:focus {
+  outline: none;
+  border-color: none !important;
+  outline-style: none !important;
+}
