@@ -2,11 +2,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 text-center mt-3">
-        <h2 class="text-white">Featured Posts</h2>
-        <p class="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, numquam
-          autem natus eligendi magnam fugiat a adipisci laudantium? Doloremque
-          facere
+        <h2 class="text-black">Featured Posts</h2>
+        <p class="text-black fs-3">
+          Unlock your potential in web development with expert coding advice.
         </p>
       </div>
     </div>
@@ -19,11 +17,11 @@
               <div class="container bg-black"  style="height: 70vh;"  [routerLink]="['/post', featuredPost.id]" >
                 <div class="row" style="padding: 100px; display: flex; justify-content:space-between;"> 
                   
-                  <div class="col-md-5">
+                  <div class="col-md-5 d-flex flex-column justify-content-between">
                   
-                      <div style=" width: 400px; display: block;">
-                        <h3 class="text-white"  > {{featuredPost.data.title}} </h3>
-                        <p style="  color:antiquewhite; width: 400px;">  {{ featuredPost.data.excerpt}}</p>
+                      <div style=" width: 400px; display:block ; ">
+                        <h2 class="text-white"  > {{featuredPost.data.title}} </h2>
+                        <h5 style="  color:rgb(222, 222, 222); width: 400px;">  {{ featuredPost.data.excerpt}}</h5>
                         
                       </div>
                       <div class="d-flex justify-content-between">
@@ -81,12 +79,12 @@
     </div>
   </div>
 </section>
-<section class="container mt-5">
-  <div class="col-md-12 text-center">
-    <h2>latest Posts</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo</p>
+<section class="container mt-5 bg-black p-5">
+  <div class="col-md-12 text-center ">
+    <h2 style=" color: var(--primary-color);">latest Posts</h2>
+    <p  style=" color: var(--primary-color);">Find the updated version of the code here with the latest post</p>
   </div>
-  <div class="row">
+  <div class="row ">
     <div class="col-md-4 mt-3" *ngFor="let latestPost of latestPostArray">
       <app-post-card [postData]="latestPost"></app-post-card>
     </div>

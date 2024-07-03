@@ -10,16 +10,17 @@
     <div class="d-flex justify-content-between">
     <div>
       <small class="bg-light text-danger text-center"
-        >{{ postData.data.category.category }}
+        > {{ postData.data.category.category }}  
       </small>
+      
+      <small class="bg-light text-info text-center ml-2">
+        &nbsp; Views - {{ postData.data.views }} &nbsp;</small
+      >
       <small
         class="bg-light text-success text-center mx-2"
         *ngIf="postData.data.isFeatured"
-        >Featured
+        ><i class="fa-solid fa-circle-check"></i>
       </small>
-      <small class="bg-light text-info text-center ml-2">
-        Views - {{ postData.data.views }}</small
-      >
     </div>
     <div>
       <small class="bg-light text-warning text-end mx-2">
@@ -30,7 +31,7 @@
   </div>
 
     <h3 class="mt-3">{{ postData.data.title }}</h3>
-    <p class="text-truncate">{{ postData.data.excerpt }}</p>
+    <p class="">{{ postData.data.excerpt }}</p>
   </div>
 </div>
 }

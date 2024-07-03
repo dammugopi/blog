@@ -12,7 +12,7 @@ export class PostsService {
   loadFeatured() {
     return this.afs
       .collection('posts', (ref) =>
-        ref.where('isFeatured', '==', true).limit(4)
+        ref.where('isFeatured', '==', true).limit(6)
       )
       .snapshotChanges()
       .pipe(

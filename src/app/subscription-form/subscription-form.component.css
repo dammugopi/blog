@@ -13,6 +13,7 @@ input[type = text],input[type=email]{
 
 .subs-text{
   width: 500px;
+  color: var(--body-text-color);
 
 
 }

@@ -4,9 +4,11 @@
 /* fonts */
 
 :root {
-  --primary-color: #026467;
-  --secondary-color: #caf3d7;
-  --body-text-color: #202437;
+  --primary-color: #eaeaea;
+  --secondary-color: #0f100f;
+  --body-text-color: #010102;
+
+  --body-background:#0a0a0a;
   --navbar-footer-color: #f9f9f9;
 }
 
@@ -20,6 +22,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   color: var(--body-text-color);
+   
 }
 .site-logo {
   padding: 5px 20px;
@@ -47,7 +50,7 @@ body {
 
 
 .bg-theme{
-  background-color: var(--primary-color);
+  background-color: var(--body-background);
 
 }
  

@@ -1,18 +1,20 @@
-<div class="card mb-5 mt-5 pb-4 shadow-effect">
+<div class="card mb-5 mt-5   shadow-effect">
   
-  <div class="card-body" >
-    <h4 class="mt-3 mb-3"> Comments ( {{totalComments}} )</h4>
+  <div class="card-body bg-black" >
+    <h4 class="mt-3 mb-3 text-white "> Comments  {{totalComments}} </h4>
     
-    <div class="comment-box mt-3 py-3" *ngFor="let comment of commentList; let i=index ">
+    <div class="comment-box mt-3 py-3" style="background-color: rgb(33, 32, 32);" *ngFor="let comment of commentList; let i=index ">
       <!-- <p>{{i}}</p> -->
-      <h6 class="mb-0"> {{comment.data.userName}} </h6>
-      <small class="text-danger"> {{comment.data.commentedAt.toMillis() |date }} </small>
-      <div class="mt-1 mb-1">
+      <h6 class="mb-0 text-white" > {{comment.data.userName}} </h6>
+      <small class="text-danger  "> {{comment.data.commentedAt.toMillis() |date }} </small>
+      <div class="mt-1 mb-1 text-white">
         {{comment.data.comment}} 
       </div>
 
+      <hr style="height: 2px; color: white;">
+
     
-     <hr>
+    
      
 
 

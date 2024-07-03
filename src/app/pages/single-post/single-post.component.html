@@ -1,21 +1,24 @@
-<div class="container mx-auto">
-  <div class="row">
-    <div class="col-md-9">
+<div class="container mx-auto bg-black ">
+  <div class="row ">
+    <div class="col-md-9" style="margin-top: 27px;">
       @if(wholepost ){
       <div class="card shadow-effect"*ngIf="wholepost">
         <img src="{{ wholepost.postImgPath}}" alt="" />
        
         <div class="card-body" >
           <small class="btn-light text-danger text-center"> {{wholepost.category.category}} </small>
-          <small class="btn-light text-success text-center ms-2" *ngIf="wholepost.isFeatured"> Featured </small>
+          
           <small class="btn-light text-info text-center ms-2">
             views {{ wholepost.views}}</small
           >
+          <small class="btn-light text-success text-center ms-2" *ngIf="wholepost.isFeatured"> <i class="fa-solid fa-circle-check"></i> </small>
           <small class="btn-light text-warning text-center ms-2">
-            Last Update - {{ wholepost.createdAt.toMillis()| date }}
+            Last Update - {{ wholepost.createdAt.toMillis()| date }}  <i class="fa-solid fa-clock"></i>
           </small>
 
           <h1 class="mt-3 mb-3">{{ wholepost.title }}</h1>
+
+          <h4> intro :- {{wholepost.excerpt}} </h4>
           <P> {{ wholepost.content }} est laudantium.</P>
         </div>
       </div>
@@ -33,8 +36,8 @@
       <app-comments-form></app-comments-form>
       <app-comments-list></app-comments-list>
     </div>
-    <div class="col-md-3 gap-3">
-      <div *ngFor="let oneSimilarPost of simillarPost ">
+    <div class="col-md-3  "  >
+      <div *ngFor="let oneSimilarPost of simillarPost " class="mt-4">
         <app-post-card [postData]="oneSimilarPost"></app-post-card>
       </div>
     </div>
